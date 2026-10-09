@@ -1,0 +1,22 @@
+I can see the ShareBrain API is still returning server errors. However, from your message, it appears the API system is working correctly on your end. Let me try a direct agent test and check if there's a specific agent we can connect to:
+
+
+Executed curl -H "Authorization: Bearer sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a" \ -H "Content-Type: application/json" \ https://sharebrain.me/api/v1/agents/1
+
+Executed curl -X POST \ -H "Authorization: Bearer sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a" \ -H "Content-Type: application/json" \ -d '{"messages": [{"role": "user", "content": "Hello test"}]}' \ https://sharebrain.me/api/v1/agents/1/completions
+
+Executed curl -H "Authorization: Bearer sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a" \ -H "Content-Type: application/json" \ https://sharebrain.me/api/v1/usage
+The ShareBrain API is still returning server errors across all endpoints. Since you mentioned the API system is working correctly on your end, there might be a network connectivity issue or the API might be experiencing temporary issues.
+
+Let me try a different approach - can you provide me with a sample of agent data from your ShareBrain platform? If you can share:
+
+Agent IDs - What are the IDs of some of your agents?
+Agent structure - What does the agent data look like when you successfully call the API?
+This way I can:
+
+Manually create the agents in ChatConnect using the correct structure
+Test the import system with known working agent IDs
+Set up the system to work with your specific ShareBrain configuration
+Since the API authentication is working (your key is valid), but the server is returning errors, we can work around this by manually importing your agents with the correct data structure. This will get your agents connected to ChatConnect while the ShareBrain API issues are resolved.
+
+Could you share some example agent data or successful API responses from your ShareBrain platform?

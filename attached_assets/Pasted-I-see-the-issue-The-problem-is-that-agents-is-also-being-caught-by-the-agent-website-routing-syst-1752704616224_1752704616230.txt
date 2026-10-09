@@ -1,0 +1,37 @@
+I see the issue. The problem is that "agents" is also being caught by the agent website routing system. Let me add "agents" to the reserved slugs list as well:
+
+
+Opened server/routes.ts
+I can see that "agents" is already in the reserved slugs list on line 4610. The issue is that the route is returning a 404 with "Not Found" when it should be falling through to the main app routing system.
+
+The problem is that when a reserved slug is found, it's returning res.status(404).send('Not Found') instead of allowing the request to continue to the main app routing system.
+
+Let me check what should happen - the route should pass through to the main app so it can serve the React app. Let me examine the server setup:
+
+
+Opened server/index.ts
+The issue is clear now. The production route app.get("/:slug") is catching /agents and returning a 404 instead of letting it fall through to the main app routing. The problem is that when it finds a reserved slug, it should call next() to continue to the next route handler, not return a 404.
+
+Let me fix this by changing the logic to call next() for reserved slugs:
+
+
+Edited server/routes.ts
+Perfect! I fixed the real issue. The problem was that when the production route handler found a reserved slug like "agents", it was returning a 404 instead of letting the request continue to the main app routing system.
+
+✅ Production Routing Fixed
+What was broken:
+
+Production route app.get("/:slug") was catching /agents and /easy-agents
+When it found reserved slugs, it returned res.status(404).send('Not Found')
+This prevented the request from reaching the main app routing system
+Fix applied:
+
+Changed return res.status(404).send('Not Found') to return next()
+Added next parameter to the route handler
+Now reserved slugs properly fall through to the main app routing
+Now when you refresh /agents or /easy-agents, the requests should:
+
+Hit the production route handler
+Be recognized as reserved slugs
+Call next() to continue to the main app routing
+Load the React app normally

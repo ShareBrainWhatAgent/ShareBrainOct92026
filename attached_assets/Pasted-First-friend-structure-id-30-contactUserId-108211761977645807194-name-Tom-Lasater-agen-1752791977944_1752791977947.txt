@@ -1,0 +1,18 @@
+First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']

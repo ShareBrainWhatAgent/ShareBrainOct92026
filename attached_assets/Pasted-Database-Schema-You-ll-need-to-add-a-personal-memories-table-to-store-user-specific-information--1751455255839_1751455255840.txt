@@ -1,0 +1,124 @@
+Database Schema
+You'll need to add a personal memories table to store user-specific information:
+
+
+Opened shared/schema.ts
+Key Components to Implement Personal Agent Functionality
+1. Database Schema
+Add a personal memories table:
+
+CREATE TABLE personal_memories (
+  id SERIAL PRIMARY KEY,
+  user_id VARCHAR REFERENCES users(id) NOT NULL,
+  agent_id INTEGER REFERENCES agents(id) NOT NULL,
+  memory_key VARCHAR(100) NOT NULL,
+  memory_value TEXT NOT NULL,
+  original_statement TEXT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+2. Memory Detection Logic
+The core functionality uses AI to detect when users want to store information:
+
+
+Opened server/openai.ts
+Complete Implementation Guide
+Here's everything you need to add Personal Agent functionality to another project:
+
+1. Database Schema
+-- Add isPersonal field to agents table
+ALTER TABLE agents ADD COLUMN is_personal BOOLEAN DEFAULT FALSE;
+-- Create personal memories table
+CREATE TABLE personal_memories (
+  id SERIAL PRIMARY KEY,
+  user_id VARCHAR REFERENCES users(id) NOT NULL,
+  agent_id INTEGER REFERENCES agents(id) NOT NULL,
+  memory_key VARCHAR(100) NOT NULL,
+  memory_value TEXT NOT NULL,
+  original_statement TEXT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+2. Memory Detection Function
+This is the key AI-powered component that detects when users want to store information:
+
+// Detects phrases like "Remember that..." or "My favorite restaurant is..."
+function detectMemoryRequest(message) {
+  const rememberPatterns = [
+    /remember that (.+)/i,
+    /please remember (.+)/i,
+    /my favorite (\w+(?:\s+\w+)*) is (.+)/i,
+    /(.+) is the best (.+?) in (.+)/i,
+    /(.+) is my (.+)/i
+  ];
+  for (const pattern of rememberPatterns) {
+    const match = message.match(pattern);
+    if (match) {
+      // Extract key-value pairs from the statement
+      const { key, value } = extractKeyValueFromStatement(match[1]);
+      return {
+        isMemoryRequest: true,
+        memoryKey: key,
+        memoryValue: value,
+        originalStatement: match[1]
+      };
+    }
+  }
+  return { isMemoryRequest: false };
+}
+3. Storage Functions
+Add these to your storage layer:
+
+// Store personal memory
+async createPersonalMemory(memory) {
+  // Insert into personal_memories table
+}
+// Retrieve memories for context
+async getPersonalMemories(userId, agentId) {
+  // Query personal_memories table
+}
+// Update existing memory
+async updatePersonalMemory(id, memoryValue, originalStatement) {
+  // Update existing memory record
+}
+// Find memory by key
+async findPersonalMemoryByKey(userId, agentId, memoryKey) {
+  // Search for existing memory with same key
+}
+4. Chat Integration
+Modify your chat function to:
+
+// In chat endpoint
+if (agent.isPersonal) {
+  // Check for memory requests
+  const memoryRequest = detectMemoryRequest(message);
+  if (memoryRequest.isMemoryRequest) {
+    // Store or update memory
+    await storage.createPersonalMemory({
+      userId,
+      agentId: agent.id,
+      memoryKey: memoryRequest.memoryKey,
+      memoryValue: memoryRequest.memoryValue,
+      originalStatement: memoryRequest.originalStatement
+    });
+  }
+  // Add memories to system prompt
+  const memories = await storage.getPersonalMemories(userId, agent.id);
+  const memoryContext = formatMemoriesForPrompt(memories);
+  systemPrompt += memoryContext;
+}
+5. Frontend Components
+Creation Form: Form for creating Personal Agents with pre-configured memory instructions
+Memory Display: Optional UI to show/manage stored memories
+Agent Type Selection: UI to choose between regular and Personal Agents
+6. Memory Context Formatting
+function formatMemoriesForPrompt(memories) {
+  if (!memories.length) return "";
+  
+  const memoryText = memories.map(m => 
+    `${m.memoryKey}: ${m.memoryValue}`
+  ).join('\n');
+  
+  return `\n\nPersonal Information to Remember:\n${memoryText}\n\nReference this information when relevant to provide personalized responses.`;
+}
+The core concept is using AI to detect when users share personal information, automatically storing it in a structured way, and including it in future conversations for personalized responses. This creates a truly personal AI assistant that remembers things about the user across conversations.

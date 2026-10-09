@@ -1,0 +1,47 @@
+Generates a single HTML file with embedded CSS/JS
+Has an 8000 token limit for comprehensive content
+Falls back to a template if generation fails
+B. Enhanced Website Generation (Agent Enhancement Service):
+
+Uses domain-specific creation manuals (like "motorcycle_travel" manual)
+Generates comprehensive Q&A content through systematic self-querying
+Creates 500+ question-answer pairs covering all aspects of the domain
+Produces much more detailed, knowledge-rich websites
+2. The India Motorcycle Trip Agent Enhancement
+For the India Motorcycle Trip Agent, we used the enhanced approach:
+
+Agent Enhancement Service (agentEnhancementService.ts) was used
+
+Applied the motorcycle_travel creation manual template
+
+Generated comprehensive Q&A content covering:
+
+500+ motorcycle routes across India
+Safety tips and preparation
+Cultural insights and permits
+Repair shop directories
+Regional specializations
+Custom regeneration route (/api/agents/:id/regenerate-website) specifically enhances with motorcycle travel manual
+
+3. Why You See Limited Routes Despite Claims
+The issue is in the generation process:
+
+Current Problem: The AI generates claims like "80+ routes" but only lists 10 because:
+
+The prompt doesn't specifically request exhaustive listing
+Token limits may cut off comprehensive content
+The generation focuses on variety rather than completeness
+Solution: The system needs more specific prompts requesting:
+
+Complete enumeration of all routes
+Structured data organization
+Progressive disclosure with proper navigation
+4. How to Improve Website Generation
+Here are the key improvements needed:
+
+Enhanced Prompts: More specific instructions for comprehensive content
+Structured Data: Request organized, hierarchical content structure
+Progressive Disclosure: Create navigation between sections
+Token Management: Break large content into manageable sections
+Template Enhancement: Improve the generation templates for better organization
+Would you like me to implement these improvements to the website generation system?

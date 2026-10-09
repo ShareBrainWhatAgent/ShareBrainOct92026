@@ -1,0 +1,47 @@
+495        // Get current user ID for authentication
+496        const userId = req.user.claims?.sub || req.user.id;
+497
+498        // Personal Agent memory handling
+499        let enhancedSystemPrompt = agent!.systemPrompt;
+500        if (agent!.isPersonal) {
+501          // Check for memory requests
+502          const memoryRequest = detectMemoryRequest(message);
+503          if (memoryRequest.isMemoryRequest && memoryRequest.memoryKey && memoryRequest.memoryValue) {
+504            try {
+505              // Check if memory already exists
+506              const existingMemory = await storage.findPersonalMemoryByKey(
+507                userId,
+508                agent!.id,
+509                memoryRequest.memoryKey
+510              );
+511
+512              if (existingMemory) {
+513                // Update existing memory
+514                await storage.updatePersonalMemory(
+515                  existingMemory.id,
+516                  memoryRequest.memoryValue,
+517                  memoryRequest.originalStatement
+518                );
+519              } else {
+520                // Create new memory
+521                await storage.createPersonalMemory({
+522                  userId,
+523                  agentId: agent!.id,
+524                  memoryKey: memoryRequest.memoryKey,
+525                  memoryValue: memoryRequest.memoryValue,
+526                  originalStatement: memoryRequest.originalStatement
+527                });
+528              }
+529            } catch (error) {
+530              console.warn("Failed to store personal memory:", error);
+531            }
+532          }
+533
+534          // Add existing memories to system prompt for personalized responses
+535          try {
+536            const memories = await storage.getPersonalMemories(userId, agent!.id);
+537            const memoryContext = formatMemoriesForPrompt(memories);
+538            enhancedSystemPrompt = agent!.systemPrompt + memoryContext;
+539          } catch (error) {
+540            console.warn("Failed to retrieve memories:", error);
+541          }

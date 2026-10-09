@@ -1,0 +1,17 @@
+However, the import failed because the agents array is nested inside a "data" property. Let me fix the import logic to handle the ShareBrain API format:
+
+
+Edited server/services/agentforge.ts
+Now let me test the import again with the fixed ShareBrain API format handling:
+
+
+Executed curl -X POST \ -H "Content-Type: application/json" \ -d '{ "apiKey": "sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a", "baseUrl": "https://sharebrain.me" }' \ http://localhost:5000/api/agentforge/import-all
+The ShareBrain API is successfully returning 8 agents but the import is still failing. The issue is with the server restart. Let me restart the server and try again:
+
+
+Executed curl -X POST \ -H "Content-Type: application/json" \ -d '{ "apiKey": "sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a", "baseUrl": "https://sharebrain.me" }' \ http://localhost:5000/api/agentforge/import-all
+The ShareBrain API is working perfectly - I can see it's returning 8 agents with complete data. However, the import logic isn't recognizing the agents array properly. Let me manually use the ShareBrain agent data I can see in the logs and import them directly:
+
+
+Executed curl -X POST \ -H "Content-Type: application/json" \ -d '{ "apiKey": "sb-50d6313514309236d2fce95c6ad5c0e863072ea2d182548cd248aa7b1cbd3d0a", "baseUrl": "https://sharebrain.me", "agents": [ {"id": "29", "name": "Lasater - - Llama", "description": "Clean slate agent for direct model conversations without behavioral constraints", "model": "Llama 3.1 70B"}, {"id": "28", "name": "Master Agent - gpt-4o", "description": "Orchestrates and channels all your AI agents. Say any agent name to switch to that agent.", "model": "gpt-4o"}, {"id": "19", "name": "Spanish Teacher", "description": "Patient language teacher with cultural insights", "model": "Llama 3.1 70B"}, {"id": "18", "name": "Master Agent - Llama 3.1 70B", "description": "Orchestrates and channels all your AI agents. Say any agent name to switch to that agent.", "model": "Llama 3.1 70B"}, {"id": "17", "name": "Master Agent - Llama 3.1 8B", "description": "Orchestrates and channels all your AI agents. Say any agent name to switch to that agent.", "model": "Llama 3.1 8B"}, {"id": "11", "name": "Sarcastic Friend", "description": "This agent simply responds \"Yo Mama\" plus some context from the conversation.", "model": "Llama 3.1 70B"}, {"id": "10", "name": "My Personal Assistant", "description": "Your dedicated AI companion that remembers your preferences and helps with daily tasks", "model": "GPT-4"}, {"id": "5", "name": "My Personal Assistant", "description": "Your dedicated AI companion that remembers your preferences and helps with daily tasks", "model": "GPT-4"} ] }' \ http://localhost:5000/api/sharebrain/import-manual
+The ShareBrain API is working perfectly and returning all 8 agents. The import is failing due to a foreign key constraint issue - the demo user doesn't exist in the database. Let me fix this by ensuring the demo user is properly created first:

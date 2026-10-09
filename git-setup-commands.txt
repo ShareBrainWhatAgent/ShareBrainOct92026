@@ -1,0 +1,38 @@
+# Git Setup Commands for ShareBrain Development Workflow
+# Run these commands in the Replit Shell tab
+
+# 1. Configure Git authentication with your token
+git remote set-url origin https://GITHUB_PERSONAL_ACCESS_TOKEN@github.com/postrenostr/AiAgentPlatformJuly18.git
+
+# 2. Fetch latest changes from GitHub
+git fetch origin
+
+# 3. Create and switch to develop branch
+git checkout -b develop
+
+# 4. Push develop branch to GitHub
+git push -u origin develop
+
+# 5. Test the setup
+echo "Git workflow configured successfully" > workflow-test.txt
+git add workflow-test.txt
+git commit -m "Setup: Configure development workflow"
+git push origin develop
+
+# 6. Create feature branch for testing
+git checkout -b feature/test-workflow
+
+# 7. Make a test commit
+echo "Feature branch test" > feature-test.txt
+git add feature-test.txt
+git commit -m "Test: Feature branch workflow"
+git push origin feature/test-workflow
+
+# 8. Switch back to develop
+git checkout develop
+
+echo "✅ Git workflow setup complete!"
+echo "🔄 Development workflow ready:"
+echo "  - main: Production branch"
+echo "  - develop: Staging branch"
+echo "  - feature/*: Feature branches"

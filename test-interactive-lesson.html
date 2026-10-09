@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Lesson Button Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .test-message { background: #333; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .button { background: linear-gradient(45deg, #7c3aed, #2563eb); color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; margin: 10px 0; }
+        .detected { color: #22c55e; }
+        .not-detected { color: #ef4444; }
+    </style>
+</head>
+<body>
+    <h1>Interactive Lesson Button Detection Test</h1>
+    <p>This tests the pattern matching logic used to detect language lessons.</p>
+    
+    <div id="test-results"></div>
+    
+    <script>
+        // Copy the exact pattern matching logic from the React component
+        function isLanguageLessonMessage(content) {
+            const lessonPatterns = [
+                /here are (\d+) basic/i,
+                /lesson \d+/i,
+                /words \d+-\d+/i,
+                /starting with lesson/i,
+                /basic survival/i,
+                /essential daily life/i,
+                /basic communication/i,
+                /hello.*water.*food.*house.*friend/i,
+                /agua.*casa.*amigo/i,
+                /eau.*maison.*ami/i,
+                /hola.*aigua.*menjar.*casa.*amic/i,
+                /first (\d+) words/i,
+                /aquí teniu/i,
+                /aquestes són/i,
+                /(\d+) paraules/i,
+                /lliçó \d+/i,
+                /vocabulary.*lesson/i,
+                /let.*learn.*these.*words/i,
+                /ten words/i,
+                /(\d+) mots/i,
+                /(\d+) palabras/i,
+                /(\d+) parole/i,
+                /(\d+) wörter/i,
+                /(\d+) слова/i,
+                /(\d+) kelime/i,
+            ];
+            
+            return lessonPatterns.some(pattern => pattern.test(content));
+        }
+        
+        // Test messages that should trigger the interactive lesson button
+        const testMessages = [
+            "Benvingut! Let's start with Lesson 1 (Words 1-10): Basic Survival. Here are the first 10 words in Catalan: Hola (Hello), Aigua (Water), Menjar (Food), Casa (House), Amic (Friend), Llibre (Book), Bon (Good), Sí (Yes), No (No), Gràcies (Thank you).",
+            
+            "Aquí teniu les 10 primeres paraules en català: Hola, Aigua, Menjar, Casa, Amic, Llibre, Bon, Sí, No, Gràcies.",
+            
+            "Starting with Lesson 1: Here are your first ten words to learn in Catalan.",
+            
+            "Lliçó 1 - Aquestes són les paraules bàsiques per a la supervivència.",
+            
+            "Let's learn these basic words: Hello, Water, Food, House, Friend, Book, Good, Yes, No, Thank you",
+            
+            "This is just a regular conversation message without lesson content."
+        ];
+        
+        const resultsDiv = document.getElementById('test-results');
+        
+        testMessages.forEach((message, index) => {
+            const isDetected = isLanguageLessonMessage(message);
+            const div = document.createElement('div');
+            div.className = 'test-message';
+            div.innerHTML = `
+                <h3>Test Message ${index + 1}: <span class="${isDetected ? 'detected' : 'not-detected'}">${isDetected ? 'DETECTED' : 'NOT DETECTED'}</span></h3>
+                <p><strong>Message:</strong> ${message}</p>
+                ${isDetected ? '<button class="button">Interactive Lesson: Words + Voice + Images</button>' : '<p style="color: #ef4444;">No interactive lesson button would appear</p>'}
+            `;
+            resultsDiv.appendChild(div);
+        });
+        
+        // Test the actual response from Catalan Language Tutor
+        console.log('Interactive Lesson Detection Test Results:');
+        testMessages.forEach((message, index) => {
+            const result = isLanguageLessonMessage(message);
+            console.log(`Test ${index + 1}: ${result ? 'DETECTED' : 'NOT DETECTED'} - "${message.substring(0, 100)}..."`);
+        });
+    </script>
+</body>
+</html>

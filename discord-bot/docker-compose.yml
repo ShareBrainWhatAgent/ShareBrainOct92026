@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  sharebrain-discord-bot:
+    build: .
+    container_name: sharebrain-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./logs:/usr/src/app/logs
+    networks:
+      - sharebrain-network
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
+
+networks:
+  sharebrain-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local

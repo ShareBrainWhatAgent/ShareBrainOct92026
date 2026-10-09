@@ -1,0 +1,40 @@
+Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:48  POST https://sharebrain.me/api/conversations/61/participants 500 (Internal Server Error)
+ce @ index-B8TCUTlc.js:48
+mutationFn @ index-B8TCUTlc.js:823
+fn @ index-B8TCUTlc.js:48
+g @ index-B8TCUTlc.js:48
+start @ index-B8TCUTlc.js:48
+execute @ index-B8TCUTlc.js:48
+await in execute
+mutate @ index-B8TCUTlc.js:48
+(anonymous) @ index-B8TCUTlc.js:48
+O @ index-B8TCUTlc.js:823
+onClick @ index-B8TCUTlc.js:823
+p9 @ index-B8TCUTlc.js:37
+x9 @ index-B8TCUTlc.js:37
+v9 @ index-B8TCUTlc.js:37
+cA @ index-B8TCUTlc.js:37
+SI @ index-B8TCUTlc.js:37
+(anonymous) @ index-B8TCUTlc.js:37
+Jj @ index-B8TCUTlc.js:40
+GM @ index-B8TCUTlc.js:37
+Yv @ index-B8TCUTlc.js:37
+Pj @ index-B8TCUTlc.js:37
+I9 @ index-B8TCUTlc.js:37Understand this error
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']
+index-B8TCUTlc.js:823 Contacts from API: (18) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 Filtered friends: (4) [{…}, {…}, {…}, {…}]
+index-B8TCUTlc.js:823 First friend structure: {id: 30, contactUserId: '108211761977645807194', name: 'Tom  Lasater (@@agenttom)', type: 'friend', hasNewMessage: false, …}
+index-B8TCUTlc.js:823 Friend keys: (6) ['id', 'contactUserId', 'name', 'type', 'hasNewMessage', 'conversationId']

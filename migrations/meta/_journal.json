@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1750730702050,
+      "tag": "0000_tense_madame_masque",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1751464532000,
+      "tag": "0002_add_personal_memories",
+      "breakpoints": true
+    }
+  ]
+}

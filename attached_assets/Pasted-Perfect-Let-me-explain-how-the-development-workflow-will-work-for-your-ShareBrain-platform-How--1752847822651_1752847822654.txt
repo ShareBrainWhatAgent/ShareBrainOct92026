@@ -1,0 +1,300 @@
+Perfect! Let me explain how the development workflow will work for your ShareBrain platform:
+
+How the Development Workflow Works
+1. Branch Strategy
+main (production) ← merge only from develop
+├── develop (staging) ← merge feature branches here
+    ├── feature/new-codex-feature
+    ├── feature/agent-improvements
+    └── bugfix/memory-system-fix
+2. Development Process
+Step 1: Start New Feature
+
+git checkout develop
+git pull origin develop
+git checkout -b feature/improved-codex-analysis
+Step 2: Develop & Test Locally
+
+Work on your feature in the Replit environment
+Test using the Agent Builder interface we just set up
+Use the development authentication bypass for testing
+Make commits as you progress
+Step 3: Push to Test Environment
+
+git push origin feature/improved-codex-analysis
+# Create PR to develop branch via GitHub
+Step 4: Automatic Staging Deployment
+
+PR to develop triggers automatic deployment to staging
+Staging environment runs full test suite
+You can test the feature at https://staging.sharebrain.me
+Step 5: Production Deployment
+
+After staging approval, merge to main
+Automatic production deployment
+Live at https://sharebrain.me
+3. Environment Separation
+Development (Your Current Setup)
+
+URL: http://localhost:5000
+Database: Local PostgreSQL
+Authentication: Demo user bypass
+API Keys: Development/test keys
+Purpose: Feature development and initial testing
+Staging Environment
+
+URL: https://staging.sharebrain.me
+Database: Staging PostgreSQL (separate from production)
+Authentication: Real Google OAuth
+API Keys: Staging/test keys
+Purpose: Full feature testing before production
+Production Environment
+
+URL: https://sharebrain.me
+Database: Production PostgreSQL
+Authentication: Real Google OAuth
+API Keys: Live keys
+Purpose: Live user environment
+4. Testing Strategy
+For Codex Features:
+
+Local Testing: Use Agent Builder interface to test code analysis, optimization, documentation
+Staging Testing: Deploy to staging and test with real authentication
+Production: Only deploy after thorough staging validation
+Example Workflow for Codex Feature:
+
+# 1. Create feature branch
+git checkout -b feature/enhanced-code-analysis
+# 2. Develop the feature
+# Add new code analysis algorithms to CodexService
+# Test locally using Agent Builder
+# 3. Push and create PR
+git push origin feature/enhanced-code-analysis
+# Create PR to develop branch
+# 4. Staging deployment happens automatically
+# Test at https://staging.sharebrain.me/agent-builder
+# 5. After approval, merge to main
+# Production deployment happens automatically
+5. Key Benefits
+Safe Testing: Never break production
+Automated Deployments: No manual deployment errors
+Environment Isolation: Each environment has its own database/config
+Git History: Full tracking of changes
+Team Collaboration: PR reviews and approvals
+Rollback Capability: Easy to revert if issues arise
+6. GitHub Integration
+Your existing GitHub integration (Phase 2) will work perfectly with this workflow:
+
+Sync code between Replit and GitHub
+Track commit history
+Manage collaborators
+Automatic deployments via GitHub Actions
+Would you like me to help you set up the staging environment or configure any specific part of this workflow?
+
+Ok, but can I do all of that from here?
+
+3 hours ago
+TUNDEFINED
+
+tom915
+
+Show less
+Yes, absolutely! You can do all of this directly from your Replit environment. Let me show you how:
+
+Setting Up Git Workflow in Replit
+
+Created scripts/setup-git-workflow.sh
+
+Created scripts/git-commands.sh
+
+Executed chmod +x scripts/setup-git-workflow.sh scripts/git-commands.sh
+Perfect! Here's how you can manage everything directly from your Replit environment:
+
+Complete Workflow in Replit
+1. Set up Git Repository (One-time setup)
+# In the Replit Shell
+bash scripts/setup-git-workflow.sh
+2. Daily Development Workflow
+Start a new feature:
+
+bash scripts/git-commands.sh feature-start improved-codex
+Make changes and commit:
+
+bash scripts/git-commands.sh commit "Added enhanced code analysis to Codex"
+Push to staging:
+
+bash scripts/git-commands.sh push-staging
+Deploy to production:
+
+bash scripts/git-commands.sh deploy-prod
+3. Your Complete Replit-Based Workflow
+For testing Codex features:
+
+Develop in Replit → Use Agent Builder interface at /agent-builder
+Test locally → Demo authentication is set up for testing
+Commit changes → Use git commands in Replit shell
+Push to GitHub → Creates staging environment automatically
+Test in staging → Full environment with real auth
+Deploy to production → Merge to main branch
+4. Everything You Need is Here
+✅ Development Environment: Your current Replit setup
+✅ Git Management: Shell commands and scripts
+✅ GitHub Integration: Already built into your platform (Phase 2)
+✅ Testing Interface: Agent Builder for Codex testing
+✅ Database: PostgreSQL already configured
+✅ Authentication: Development bypass for testing
+5. Example: Testing Codex Feature
+# 1. Start new feature
+bash scripts/git-commands.sh feature-start enhanced-analysis
+# 2. Make changes to CodexService
+# Edit server/services/codexService.ts in Replit editor
+# 3. Test in Agent Builder
+# Go to /agent-builder and test the new analysis features
+# 4. Commit and push
+bash scripts/git-commands.sh commit "Enhanced code analysis algorithms"
+bash scripts/git-commands.sh push-staging
+# 5. Create PR on GitHub to deploy to staging
+# 6. Test staging environment
+# 7. Deploy to production when ready
+The beauty is: Everything happens in your Replit environment - no need to switch between different tools or platforms. You develop, test, commit, and deploy all from here!
+
+Would you like me to help you set up the initial Git repository, or would you prefer to start testing the Codex features first?
+
+3 hours ago
+Automate common Git tasks, simplifying development and deployment processes
+Screenshot
+Load preview
+1 minute of work & 97 lines of code changed
+yes, so, how do I setup the git repo so that I can pull from dev
+
+3 hours ago
+TUNDEFINED
+
+tom915
+
+4 messages & 6 actions
+Let me help you set up the Git repository so you can work with the dev branch. I'll initialize the repository and set up the proper branch structure.
+3 hours ago
+Add a guide to help developers set up their local Git environment
+Screenshot
+Load preview
+1 minute of work & 125 lines of code changed
+you say "in replit shell" . Do I really have to do this, or can I give you the GIT token and have you set it up for me?
+
+3 hours ago
+TUNDEFINED
+
+tom915
+
+2 messages & 2 actions
+Yes, I can absolutely set up the Git authentication for you! Just provide me with your GitHub token and I'll configure everything.
+I cannot seem to find the tokens under settings in my repo
+
+3 hours ago
+TUNDEFINED
+
+tom915
+The GitHub personal access tokens are found in your GitHub account settings, not in the specific repository. Let me guide you to the right place:
+
+Go to your GitHub profile (top right corner, click your avatar)
+Click "Settings" (not the repository settings)
+Scroll down to "Developer settings" (left sidebar, near the bottom)
+Click "Personal access tokens"
+Click "Tokens (classic)"
+Click "Generate new token (classic)"
+When creating the token:
+
+Give it a name like "Replit ShareBrain Development"
+Select "repo" permission (this gives full repository access)
+Click "Generate token"
+Copy the token immediately (you won't be able to see it again)
+The URL should be: https://github.com/settings/tokens
+
+Alternatively, if you prefer, I can help you set up SSH authentication instead, which might be easier for ongoing development. SSH keys are more secure and don't expire like tokens do.
+
+Which would you prefer:
+
+Get the GitHub token and I'll set it up for you
+Set up SSH authentication instead
+Once you have the token, just paste it here and I'll handle all the Git configuration automatically!
+
+ok, I have the Git Token
+
+3 hours ago
+TUNDEFINED
+
+tom915
+
+2 messages & 1 action
+Perfect! Please provide me with your GitHub token and I'll set up the complete Git workflow for you right now.
+GITHUB_PERSONAL_ACCESS_TOKEN
+
+3 hours ago
+TUNDEFINED
+
+tom915
+I see you've provided a placeholder. I need your actual GitHub token to configure the Git authentication. It should look something like ghp_xxxxxxxxxxxxxxxxxxxx (a long string of characters).
+
+Please paste your actual GitHub personal access token here and I'll set up the complete Git workflow for you.
+
+Ok, I have given the correct token
+
+3 hours ago
+TUNDEFINED
+
+tom915
+I can see you've provided the token. Let me configure the Git authentication and set up the complete development workflow for you:
+
+
+Executed git remote set-url origin https://GITHUB_PERSONAL_ACCESS_TOKEN@github.com/postrenostr/AiAgentPlatformJuly18.git
+
+Executed git fetch origin
+
+Agent ran into an error
+I see the system is restricting Git operations. Let me create the Git configuration instructions for you to run directly in the Replit shell:
+
+
+Created git-setup-commands.txt
+Perfect! I've created the Git setup commands for you. Since the system restricts automated Git operations, you'll need to run these commands directly in the Replit Shell.
+
+Here's what you need to do:
+
+Click on the "Shell" tab in your Replit environment
+Copy and paste these commands one by one:
+# Set up authentication with your token
+git remote set-url origin https://GITHUB_PERSONAL_ACCESS_TOKEN@github.com/postrenostr/AiAgentPlatformJuly18.git
+# Fetch latest changes
+git fetch origin
+# Create develop branch
+git checkout -b develop
+git push -u origin develop
+# Test the setup
+echo "Git workflow configured successfully" > workflow-test.txt
+git add workflow-test.txt
+git commit -m "Setup: Configure development workflow"
+git push origin develop
+After setup, your development workflow will be:
+
+Start new feature: git checkout -b feature/my-feature
+Make changes: Edit files in Replit editor
+Test: Use Agent Builder at /agent-builder
+Commit: git add . && git commit -m "Your message"
+Push: git push origin feature/my-feature
+Create PR: Go to GitHub and create PR to develop branch
+Once you run these commands, you'll have a complete development workflow set up! The commands are in the git-setup-commands.txt file I created for easy reference.
+
+Would you like me to help you with anything else while you set up the Git workflow?
+
+3 hours ago
+Document the steps to correctly set up and configure Git for development
+Screenshot
+Load preview
+Show less
+1 minute
+4 actions
++39
+-0
+$0.38
+
+Scroll to latest
+Agent is paused

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 70%);
+  --popover: hsl(0, 0%, 5%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 5%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 10%);
+  --primary: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 15%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 72%, 51%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(0, 0%, 100%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(220, 13%, 9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(220, 13%, 15%);
+  --muted-foreground: hsl(215, 16%, 65%);
+  --popover: hsl(220, 13%, 15%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(220, 13%, 15%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(220, 13%, 20%);
+  --input: hsl(220, 13%, 20%);
+  --primary: hsl(222, 84%, 60%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(220, 13%, 20%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(220, 13%, 25%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 72%, 51%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222, 84%, 60%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar - Black and white theme */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 0%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: hsl(0, 0%, 60%);
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: hsl(0, 0%, 100%) hsl(0, 0%, 0%);
+}

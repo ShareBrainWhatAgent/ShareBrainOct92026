@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Motorcycle Trip - Ultimate Guide to Motorcycle Adventures in India</title>
+    <meta name="description" content="Comprehensive guide to motorcycle travel across India. Discover routes, tips, cultural insights, and everything you need for an unforgettable motorcycle adventure in incredible India.">
+    <meta name="keywords" content="India motorcycle trip, motorcycle travel India, Royal Enfield India, Indian motorcycle routes, motorcycle adventure travel">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23FF6B35" width="1200" height="600"/><path fill="%23F7931E" d="M0,300 Q300,200 600,300 T1200,300 V600 H0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .route-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .route-card h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .route-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .route-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .route-card li:before {
+            content: "🏍️";
+            position: absolute;
+            left: 0;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tip-card {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .tip-card h4 {
+            color: #0ea5e9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge {
+            background: #667eea;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h3 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .cultural-insights {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid #10b981;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .cultural-insights h3 {
+            color: #047857;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 2rem;
+            }
+            
+            .routes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🏍️ India Motorcycle Trip</h1>
+            <p>Your Ultimate Guide to Motorcycle Adventures Across Incredible India</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>🌟 Why Choose India for Your Motorcycle Adventure?</h2>
+                <p>India offers one of the world's most diverse and thrilling motorcycle experiences. From the snow-capped peaks of the Himalayas to the sun-soaked beaches of Goa, from ancient temples to bustling bazaars, every mile tells a story. The legendary Royal Enfield motorcycles, born in India, provide the perfect companion for this journey of a lifetime.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">28</div>
+                        <div class="stat-label">States to Explore</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,287</div>
+                        <div class="stat-label">Kilometers of Coastline</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">22</div>
+                        <div class="stat-label">Official Languages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1,000+</div>
+                        <div class="stat-label">Years of Culture</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🗺️ Epic Motorcycle Routes</h2>
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <h4>🏔️ The Himalayan Circuit</h4>
+                        <p><strong>Duration:</strong> 14-21 days</p>
+                        <p><strong>Difficulty:</strong> Challenging</p>
+                        <ul>
+                            <li>Delhi to Manali (550km)</li>
+                            <li>Manali to Leh via Rohtang Pass</li>
+                            <li>Leh to Khardung La (World's highest motorable road)</li>
+                            <li>Nubra Valley exploration</li>
+                            <li>Return via Srinagar</li>
+                        </ul>
+                        <p><strong>Highlights:</strong> Breathtaking mountain scenery, Buddhist monasteries, world's highest passes</p>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h4>🏖️ The Golden Triangle & Rajasthan</h4>
+                        <p><strong>Duration:</strong> 10-14 days</p>
+                        <p><strong>Difficulty:</strong> Moderate</p>
+                        <ul>
+                            <li>Delhi to Agra (Taj Mahal)</li>
+                            <li>Agra to Jaipur (Pink City)</li>
+                            <li>Jaipur to Udaipur (City of Lakes)</li>
+                            <li>Udaipur to Jodhpur (Blue City)</li>
+                            <li>Jodhpur to Jaisalmer (Golden City)</li>
+                        </ul>
+                        <p><strong>Highlights:</strong> Historic palaces, desert landscapes, vibrant culture</p>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h4>🌴 The Coastal Cruise</h4>
+                        <p><strong>Duration:</strong> 12-16 days</p>
+                        <p><strong>Difficulty:</strong> Easy-Moderate</p>
+                        <ul>
+                            <li>Mumbai to Goa (coastal highway)</li>
+                            <li>Goa to Mangalore</li>
+                            <li>Mangalore to Cochin (Kerala)</li>
+                            <li>Cochin to Munnar (Hill Station)</li>
+                            <li>Munnar to Kanyakumari (Land's End)</li>
+                        </ul>
+                        <p><strong>Highlights:</strong> Pristine beaches, backwaters, spice plantations</p>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h4>🏛️ The Heritage Trail</h4>
+                        <p><strong>Duration:</strong> 8-12 days</p>
+                        <p><strong>Difficulty:</strong> Easy</p>
+                        <ul>
+                            <li>Delhi to Varanasi (Ganges)</li>
+                            <li>Varanasi to Khajuraho (Temple Art)</li>
+                            <li>Khajuraho to Orchha (Medieval City)</li>
+                            <li>Orchha to Gwalior (Historic Fort)</li>
+                            <li>Return to Delhi</li>
+                        </ul>
+                        <p><strong>Highlights:</strong> Ancient temples, spiritual experiences, architectural marvels</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>🚨 Essential Pre-Trip Preparation</h3>
+                <p><strong>Best Time to Visit:</strong> October to March (cooler weather, clear skies)</p>
+                <p><strong>Permit Requirements:</strong> International Driving Permit + Indian license conversion</p>
+                <p><strong>Recommended Motorcycle:</strong> Royal Enfield Himalayan, Classic 350, or Interceptor 650</p>
+                <p><strong>Insurance:</strong> Comprehensive travel and motorcycle insurance mandatory</p>
+            </div>
+            
+            <div class="section">
+                <h2>💡 Expert Tips for Success</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>🛠️ Mechanical Preparation</h4>
+                        <p>Service your bike thoroughly before departure. Carry essential tools, spare parts, and know basic repairs. Royal Enfield service centers are widespread across India.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>📱 Navigation & Communication</h4>
+                        <p>Download offline maps (Google Maps, Maps.me). Carry a local SIM card for data. GPS devices can fail in remote areas - always have backup navigation.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>🏨 Accommodation Strategy</h4>
+                        <p>Book major cities in advance. Small towns offer budget guesthouses and dharamshalas. Camping is possible but requires permits in some regions.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>💰 Budget Planning</h4>
+                        <p>Daily budget: ₹2,000-5,000 ($25-60). Fuel costs vary by region. Cash is king - carry small denominations. ATMs available in most towns.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>🎒 Packing Essentials</h4>
+                        <p>Pack light but smart. Weather-appropriate gear, first aid kit, water purification tablets, and photocopies of important documents.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>🚦 Traffic & Safety</h4>
+                        <p>Indian traffic is chaotic but follows unwritten rules. Stay alert, be patient, and always wear protective gear. Night riding is not recommended.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cultural-insights">
+                <h3>🕉️ Cultural Insights & Etiquette</h3>
+                <p><strong>Language:</strong> Hindi and English are widely spoken. Learning basic Hindi phrases helps immensely.</p>
+                <p><strong>Customs:</strong> Remove shoes before entering homes/temples. Dress modestly, especially in religious places.</p>
+                <p><strong>Food:</strong> Street food is delicious but start slowly. Vegetarian options available everywhere. Avoid raw vegetables initially.</p>
+                <p><strong>Tipping:</strong> 10-15% in restaurants, ₹20-50 for hotel staff, ₹100-200 for guides.</p>
+                <p><strong>Festivals:</strong> Diwali, Holi, Dussehra - incredible experiences but expect crowds and closures.</p>
+            </div>
+            
+            <div class="section">
+                <h2>🛡️ Safety & Emergency Preparedness</h2>
+                <div class="badges-section">
+                    <span class="badge">Emergency Contacts: 100 (Police), 108 (Ambulance)</span>
+                    <span class="badge">Tourist Helpline: 1363</span>
+                    <span class="badge">Embassy Registration Recommended</span>
+                </div>
+                
+                <h3>Essential Safety Gear</h3>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li>DOT/ECE approved helmet (mandatory)</li>
+                    <li>Protective riding jacket and pants</li>
+                    <li>Gloves and riding boots</li>
+                    <li>Knee and elbow guards</li>
+                    <li>High-visibility vest</li>
+                    <li>First aid kit with basic medicines</li>
+                    <li>Emergency whistle and flashlight</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🌟 Unforgettable Experiences Await</h2>
+                <p>A motorcycle journey through India isn't just about the destination—it's about the transformation that happens along the way. You'll witness breathtaking sunrises over ancient temples, share tea with locals in remote villages, navigate bustling markets, and find serenity in monasteries perched on mountain edges.</p>
+                
+                <p>Every mile brings new challenges, new friendships, and new perspectives. The memories you create will last a lifetime, and the confidence you gain will change how you see the world.</p>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="https://sharebrain.me/chat/321" class="cta-button">
+                        🏍️ Start Planning Your Adventure
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add smooth scrolling for better user experience
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add hover effects to cards
+        document.querySelectorAll('.route-card, .tip-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Add click tracking for analytics
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            console.log('User clicked to start planning their India motorcycle adventure!');
+        });
+    </script>
+</body>
+</html>

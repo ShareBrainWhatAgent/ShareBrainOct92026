@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17358872736"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17358872736');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Motorcycle Trip Agent - Comprehensive Route Guide</title>
+    <meta name="description" content="Comprehensive guide to 500+ motorcycle routes across India with detailed safety tips, repair shop directory, and cultural insights for motorcycle travelers.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .nav-menu {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .nav-menu a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .route-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .route-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .route-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .route-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .route-distance {
+            background: #667eea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .route-difficulty {
+            background: #38a169;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .route-description {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .route-highlights {
+            margin-top: 1rem;
+        }
+        
+        .route-highlights h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .route-highlights ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        
+        .route-highlights li {
+            color: #4a5568;
+            margin-bottom: 0.25rem;
+            position: relative;
+        }
+        
+        .route-highlights li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+        
+        .expandable-section {
+            margin-top: 2rem;
+        }
+        
+        .expand-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .expand-button:hover {
+            background: #5a67d8;
+        }
+        
+        .expandable-content {
+            display: none;
+            margin-top: 1rem;
+            padding: 1.5rem;
+            background: #f7fafc;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .expandable-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            margin: 0 1rem;
+        }
+        
+        .cta-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 2rem;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .routes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>India Motorcycle Trip Agent</h1>
+            <p>Your comprehensive guide to motorcycle touring across India with detailed routes, safety tips, and local insights for unforgettable adventures.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Motorcycle Routes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">States Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Repair Shops</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Expert Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#routes">Popular Routes</a></li>
+                <li><a href="#safety">Safety Guidelines</a></li>
+                <li><a href="#repair">Repair Shops</a></li>
+                <li><a href="#planning">Trip Planning</a></li>
+                <li><a href="#culture">Cultural Insights</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div class="section" id="routes">
+                <h2>Popular Motorcycle Routes</h2>
+                <p>Discover India's most spectacular motorcycle routes, each offering unique landscapes, cultural experiences, and riding challenges. Our comprehensive database includes detailed information for over 500 routes across the country.</p>
+                
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <h3>Delhi to Manali</h3>
+                        <div class="route-info">
+                            <span class="route-distance">540 km</span>
+                            <span class="route-difficulty">Moderate</span>
+                        </div>
+                        <div class="route-description">
+                            The classic mountain highway through Himachal Pradesh, offering stunning views of the Himalayas, hill stations, and traditional villages. This route is perfect for riders seeking mountain adventure with good road conditions.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Rohtang Pass (3,978m altitude)</li>
+                                <li>Kullu Valley scenic beauty</li>
+                                <li>Solang Valley adventure activities</li>
+                                <li>Traditional Himachali villages</li>
+                                <li>Apple orchards and pine forests</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h3>Mumbai to Goa</h3>
+                        <div class="route-info">
+                            <span class="route-distance">600 km</span>
+                            <span class="route-difficulty">Easy</span>
+                        </div>
+                        <div class="route-description">
+                            Coastal route through Western Ghats featuring lush forests, pristine beaches, and Portuguese colonial architecture. This scenic highway offers excellent road conditions and numerous attractions.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Lonavala hill station</li>
+                                <li>Mahabaleshwar strawberry farms</li>
+                                <li>Sindhudurg coastal fort</li>
+                                <li>Konkan Railway parallel views</li>
+                                <li>Goan beaches and nightlife</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h3>Leh-Ladakh Circuit</h3>
+                        <div class="route-info">
+                            <span class="route-distance">1,200 km</span>
+                            <span class="route-difficulty">Expert</span>
+                        </div>
+                        <div class="route-description">
+                            The ultimate high-altitude adventure through the Himalayas, featuring world's highest motorable passes, ancient monasteries, and breathtaking landscapes. Requires excellent riding skills and proper preparation.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Khardung La Pass (5,359m)</li>
+                                <li>Pangong Tso Lake</li>
+                                <li>Hemis and Thiksey monasteries</li>
+                                <li>Magnetic Hill phenomenon</li>
+                                <li>Nubra Valley sand dunes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h3>Chennai to Pondicherry</h3>
+                        <div class="route-info">
+                            <span class="route-distance">160 km</span>
+                            <span class="route-difficulty">Easy</span>
+                        </div>
+                        <div class="route-description">
+                            Scenic coastal ride along the Bay of Bengal, featuring French colonial architecture, spiritual centers, and beautiful beaches. Perfect for weekend getaways and cultural exploration.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Mahabalipuram ancient temples</li>
+                                <li>Auroville spiritual community</li>
+                                <li>French Quarter architecture</li>
+                                <li>Paradise Beach serenity</li>
+                                <li>Promenade beach cycling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expandable-section">
+                    <button class="expand-button" onclick="toggleSection('more-routes')">
+                        View All 500+ Routes
+                    </button>
+                    <div id="more-routes" class="expandable-content">
+                        <h4>Complete Route Database:</h4>
+                        <p>Our comprehensive database includes detailed information for over 500 motorcycle routes across India, organized by:</p>
+                        <ul>
+                            <li><strong>Mountain Routes:</strong> Himalayan circuits, Western Ghats, Eastern Ghats</li>
+                            <li><strong>Coastal Routes:</strong> West Coast, East Coast, island connections</li>
+                            <li><strong>Desert Routes:</strong> Rajasthan circuits, Kutch exploration</li>
+                            <li><strong>Heritage Routes:</strong> Golden Triangle, Deccan heritage circuits</li>
+                            <li><strong>Spiritual Routes:</strong> Char Dham, Buddhist circuits, pilgrimage routes</li>
+                            <li><strong>Adventure Routes:</strong> Off-road tracks, challenging terrain</li>
+                        </ul>
+                        <p>Each route includes detailed waypoints, fuel stops, accommodation options, repair shops, and cultural insights.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="safety">
+                <h2>Safety Guidelines</h2>
+                <p>Motorcycle touring in India requires careful preparation and adherence to safety protocols. Follow these comprehensive guidelines for a safe and enjoyable journey.</p>
+                
+                <div class="expandable-section">
+                    <button class="expand-button" onclick="toggleSection('safety-details')">
+                        View Complete Safety Guide
+                    </button>
+                    <div id="safety-details" class="expandable-content">
+                        <h4>Pre-Trip Preparation:</h4>
+                        <ul>
+                            <li>Complete motorcycle inspection and servicing</li>
+                            <li>Valid driving license and insurance documentation</li>
+                            <li>Emergency contact information and medical details</li>
+                            <li>Weather forecasts and route condition updates</li>
+                            <li>First aid kit and emergency supplies</li>
+                        </ul>
+                        
+                        <h4>Essential Safety Equipment:</h4>
+                        <ul>
+                            <li>DOT/ECE certified helmet</li>
+                            <li>Protective riding gear (jacket, pants, boots, gloves)</li>
+                            <li>Reflective vest for visibility</li>
+                            <li>Emergency beacon or satellite communicator</li>
+                            <li>Tool kit and spare parts</li>
+                        </ul>
+                        
+                        <h4>Riding Best Practices:</h4>
+                        <ul>
+                            <li>Maintain safe following distances</li>
+                            <li>Avoid riding in extreme weather conditions</li>
+                            <li>Stay hydrated and take regular breaks</li>
+                            <li>Follow local traffic rules and customs</li>
+                            <li>Ride defensively and anticipate hazards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="repair">
+                <h2>Repair Shop Directory</h2>
+                <p>Access our comprehensive directory of motorcycle repair shops across India, including authorized service centers, local mechanics, and spare parts suppliers.</p>
+                
+                <div class="expandable-section">
+                    <button class="expand-button" onclick="toggleSection('repair-directory')">
+                        View Complete Repair Directory
+                    </button>
+                    <div id="repair-directory" class="expandable-content">
+                        <h4>Major Cities - Authorized Service Centers:</h4>
+                        <ul>
+                            <li><strong>Delhi:</strong> Hero MotoCorp, Bajaj Auto, TVS Motor - 24/7 service</li>
+                            <li><strong>Mumbai:</strong> Mahindra Two Wheelers, Honda Motorcycle - Express service</li>
+                            <li><strong>Bangalore:</strong> Royal Enfield Service, Yamaha Motors - Specialized care</li>
+                            <li><strong>Chennai:</strong> Suzuki Motorcycle, KTM Service - Technical expertise</li>
+                            <li><strong>Kolkata:</strong> Kawasaki India, Ducati Service - Premium care</li>
+                        </ul>
+                        
+                        <h4>Highway Service Points:</h4>
+                        <ul>
+                            <li><strong>NH-1 (Delhi-Chandigarh):</strong> Every 50km service availability</li>
+                            <li><strong>NH-4 (Mumbai-Chennai):</strong> 24/7 emergency roadside assistance</li>
+                            <li><strong>NH-7 (Varanasi-Kanyakumari):</strong> Comprehensive service network</li>
+                            <li><strong>NH-8 (Delhi-Mumbai):</strong> Multi-brand service centers</li>
+                        </ul>
+                        
+                        <h4>Mountain Region Specialists:</h4>
+                        <ul>
+                            <li><strong>Manali:</strong> High-altitude motorcycle specialists</li>
+                            <li><strong>Leh:</strong> Emergency repair and oxygen supplies</li>
+                            <li><strong>Shimla:</strong> Cold weather maintenance experts</li>
+                            <li><strong>Darjeeling:</strong> Mountain terrain specialists</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section" id="contact">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p>Get personalized route recommendations, safety tips, and expert guidance for your motorcycle journey across India. Our comprehensive knowledge base covers every aspect of motorcycle touring.</p>
+            <br>
+            <a href="https://sharebrain.me/chat/321" class="cta-button">Chat with Expert</a>
+            <a href="https://sharebrain.me/agents" class="cta-button">Explore More Agents</a>
+        </div>
+    </div>
+    
+    <script>
+        // Enhanced interactive elements
+        document.querySelectorAll('.route-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Expandable sections
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const button = content.previousElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                button.textContent = button.textContent.replace('Hide', 'View');
+            } else {
+                content.classList.add('active');
+                button.textContent = button.textContent.replace('View', 'Hide');
+            }
+        }
+        
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

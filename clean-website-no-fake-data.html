@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17358872736"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17358872736');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Motorcycle Trip Agent - ShareBrain</title>
+    <meta name="description" content="Comprehensive motorcycle travel guide for India with routes, safety tips, permits, and cultural insights for unforgettable adventures.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: #ffffff;
+            background: #000000;
+            border-bottom: 1px solid #333333;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #ffffff;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        
+        .nav-menu {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid #333333;
+        }
+        
+        .nav-menu a:hover {
+            background: #333333;
+            color: #ffffff;
+        }
+        
+        .content {
+            background: #000000;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section h2 {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            border-bottom: 2px solid #333333;
+            padding-bottom: 0.5rem;
+        }
+        
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .route-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .route-card:hover {
+            transform: translateY(-5px);
+            border-color: #555555;
+        }
+        
+        .route-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .route-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .route-distance {
+            background: #333333;
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .route-difficulty {
+            background: #555555;
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .route-description {
+            color: #ffffff;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .route-highlights {
+            margin-top: 1rem;
+        }
+        
+        .route-highlights h4 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .route-highlights ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        
+        .route-highlights li {
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+            position: relative;
+        }
+        
+        .route-highlights li::before {
+            content: '•';
+            color: #ffffff;
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+        
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .qa-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        .qa-card h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .qa-card p {
+            color: #ffffff;
+            line-height: 1.7;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 20px;
+            color: #ffffff;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            background: #333333;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border: 1px solid #555555;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 0 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #555555;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 2rem;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .routes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .qa-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🏍️ India Motorcycle Trip Agent</h1>
+            <p>Your comprehensive guide to motorcycle touring across India with detailed routes, safety tips, and local insights for unforgettable adventures.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Motorcycle Routes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">States Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Expert</div>
+                    <div class="stat-label">Guidance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#routes">Popular Routes</a></li>
+                <li><a href="#safety">Safety Guidelines</a></li>
+                <li><a href="#planning">Trip Planning</a></li>
+                <li><a href="#culture">Cultural Insights</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div class="section" id="routes">
+                <h2>Popular Motorcycle Routes</h2>
+                <p>Discover India's most spectacular motorcycle routes, each offering unique landscapes, cultural experiences, and riding challenges.</p>
+                
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <h3>Delhi to Manali</h3>
+                        <div class="route-info">
+                            <span class="route-distance">540 km</span>
+                            <span class="route-difficulty">Moderate</span>
+                        </div>
+                        <div class="route-description">
+                            The classic mountain highway through Himachal Pradesh, offering stunning views of the Himalayas, hill stations, and traditional villages. This route is perfect for riders seeking mountain adventure with good road conditions.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Rohtang Pass (3,978m altitude)</li>
+                                <li>Kullu Valley scenic beauty</li>
+                                <li>Solang Valley adventure activities</li>
+                                <li>Traditional Himachali villages</li>
+                                <li>Apple orchards and pine forests</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h3>Mumbai to Goa</h3>
+                        <div class="route-info">
+                            <span class="route-distance">600 km</span>
+                            <span class="route-difficulty">Easy</span>
+                        </div>
+                        <div class="route-description">
+                            Coastal route through Western Ghats featuring lush forests, pristine beaches, and Portuguese colonial architecture. This scenic highway offers excellent road conditions and numerous attractions.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Lonavala hill station</li>
+                                <li>Mahabaleshwar strawberry farms</li>
+                                <li>Sindhudurg coastal fort</li>
+                                <li>Konkan Railway parallel views</li>
+                                <li>Goan beaches and nightlife</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="route-card">
+                        <h3>Leh-Ladakh Circuit</h3>
+                        <div class="route-info">
+                            <span class="route-distance">1,200 km</span>
+                            <span class="route-difficulty">Expert</span>
+                        </div>
+                        <div class="route-description">
+                            The ultimate high-altitude adventure through the Himalayas, featuring world's highest motorable passes, ancient monasteries, and breathtaking landscapes. Requires excellent riding skills and proper preparation.
+                        </div>
+                        <div class="route-highlights">
+                            <h4>Key Highlights:</h4>
+                            <ul>
+                                <li>Khardung La Pass (5,359m)</li>
+                                <li>Pangong Tso Lake</li>
+                                <li>Hemis and Thiksey monasteries</li>
+                                <li>Magnetic Hill phenomenon</li>
+                                <li>Nubra Valley sand dunes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="safety">
+                <h2>Frequently Asked Questions</h2>
+                <div class="qa-grid">
+                    <div class="qa-card">
+                        <h4>Q: What permits are required for motorcycle travel in India?</h4>
+                        <p>A: You need an International Driving Permit (IDP) plus conversion to Indian license. For restricted areas like Ladakh, inner line permits are required. Process takes 2-3 weeks, apply in advance.</p>
+                    </div>
+                    <div class="qa-card">
+                        <h4>Q: Which motorcycle is best for Indian roads?</h4>
+                        <p>A: Royal Enfield Himalayan for mountains, Classic 350 for touring, Interceptor 650 for highways. All have excellent service network across India with spare parts availability.</p>
+                    </div>
+                    <div class="qa-card">
+                        <h4>Q: What's the best time to visit different regions?</h4>
+                        <p>A: Himalayas: May-October, Rajasthan: November-March, South India: December-February, Northeast: October-April. Avoid monsoon season (June-September) for mountain routes.</p>
+                    </div>
+                    <div class="qa-card">
+                        <h4>Q: What safety gear is essential?</h4>
+                        <p>A: DOT helmet, riding jacket with armor, gloves, boots, knee guards. For high altitude: oxygen supplements, warm clothing, sunglasses, sunscreen SPF 50+.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section" id="contact">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p>Get personalized route recommendations, safety tips, and expert guidance for your motorcycle journey across India.</p>
+            <br>
+            <a href="https://sharebrain.me/chat/321" class="cta-button">Chat with Expert</a>
+            <a href="https://sharebrain.me/agents" class="cta-button">Explore More Agents</a>
+        </div>
+    </div>
+    
+    <script>
+        // Interactive elements
+        document.querySelectorAll('.route-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

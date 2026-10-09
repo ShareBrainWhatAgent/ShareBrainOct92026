@@ -1,0 +1,5 @@
+process.env.STRIPE_SECRET_KEY = 'sk_test_123'
+process.env.DATABASE_URL = 'postgres://user:pass@localhost:5432/test'
+process.env.SESSION_SECRET = 'secret'
+process.env.OPENAI_API_KEY = 'test'
+process.env.TOGETHER_API_KEY = 'test'
